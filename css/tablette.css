@@ -1,0 +1,39 @@
+footer {
+    text-align: center;
+}
+
+.number {
+    right: 0;
+    top: -15px;
+}
+
+.restaurant__title {
+    width: 100%;
+}
+
+.restaurant__title h3 {
+    text-align: center;
+}
+
+.card {
+    width: 40%;
+}
+
+.main__restaurant {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.operation__steps {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.operation h2 {
+    text-align: center;
+}
+

@@ -1,0 +1,33 @@
+.main__restaurant {
+    padding: 0 20%;
+}
+
+.full__menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.starter {
+    width: 400px;
+}
+
+.plat {
+    width: 400px;
+}
+
+.dessert {
+    width: 400px;
+}
+
+.menu__title {
+    padding: 10px 90px;
+}
+
+.second__line p {
+    padding-right: 20px;
+}
+
+.btn__order button {
+    width: 25%;
+}
+
