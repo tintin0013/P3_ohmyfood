@@ -30,6 +30,59 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes grow {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(1.8);
+    transform: scaleY(1.8);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main__header h1 {
   text-align: center;
 }
@@ -46,6 +99,7 @@ footer {
 footer h3 {
   font-family: "Shrikhand", "sans-serif";
   padding: 5px 0 20px 0;
+  font-weight: lighter;
 }
 
 footer a {
@@ -54,7 +108,7 @@ footer a {
 
 footer ul {
   list-style-type: none;
-  padding: 5px;
+  padding: 5px 5px 5px 0px;
 }
 
 footer ul li {
@@ -132,6 +186,14 @@ footer ul .fa-hands-helping {
   color: #838383;
 }
 
+.card__title h3::after {
+  content: "";
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  border: 2px solid #99E2D0;
+}
+
 .main__restaurant {
   background: #f2f2f2;
   display: flex;
@@ -158,6 +220,72 @@ footer ul .fa-hands-helping {
   font-size: 1.5rem;
 }
 
+.loader {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA,#99E2D0, #FFFFFF);
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  font-family: Shrikhand, sans-serif;
+  font-size: x-large;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: loader 1s ease-in-out 3s forwards;
+}
+
+.loader__food {
+  text-align: center;
+  padding-top: 50%;
+}
+
+.loader__food span {
+  display: inline-block;
+  width: 20px;
+  height: 150px;
+  padding-right: 1em;
+}
+
+.loader__fork {
+  padding-top: 100px;
+  animation: rotate 2s linear infinite;
+}
+
+.loader__food span:nth-child(1) {
+  animation: grow 1s ease-in-out infinite;
+}
+
+.loader__food span:nth-child(2) {
+  animation: grow 2s ease-in-out 150ms infinite;
+}
+
+.loader__food span:nth-child(3) {
+  animation: grow 1s ease-in-out  infinite;
+}
+
+.loader__food span:nth-child(4) {
+  animation: grow 2s ease-in-out 150ms infinite;
+}
+
+.loader__food span:nth-child(5) {
+  animation: grow 1s ease-in-out infinite;
+}
+
+.loader__food span:nth-child(6) {
+  animation: grow 2s ease-in-out 150ms infinite;
+}
+
+.loader__food span:nth-child(7) {
+  animation: grow 1s ease-in-out infinite;
+}
+
+.loader__food span:nth-child(8) {
+  animation: grow 2s ease-in-out 150ms infinite;
+}
+
 .main__menu {
   background-color: #f6f6f6;
   border-top-left-radius: 25px;
@@ -167,10 +295,38 @@ footer ul .fa-hands-helping {
   margin-top: -50px;
 }
 
-.line {
-  width: 40px;
-  border: 2px solid #99E2D0;
-  margin-left: 10px;
+.starter {
+  animation: fadein 3s ease-in-out;
+}
+
+.plat {
+  animation: fadein 6s ease-in-out;
+}
+
+.dessert {
+  animation: fadein 9s ease-in-out;
+}
+
+.cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+
+.cross .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
 }
 
 .maps {
@@ -200,12 +356,14 @@ footer ul .fa-hands-helping {
   font-weight: bold;
   box-shadow: 4px 4px 6px #aaa;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .btn__about button:hover {
   background-color: #ae80e5;
   background-blend-mode: lighten;
   box-shadow: 4px 4px 6px #000;
+  transition: 300ms ease-in-out;
 }
 
 .new {
@@ -219,11 +377,12 @@ footer ul .fa-hands-helping {
 }
 
 .fill {
-  color: black;
   cursor: pointer;
+ /* transition: all 300ms ease-in-out;*/
 }
 
 .fill:hover {
+  animation: fill 300ms ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -256,7 +415,8 @@ footer ul .fa-hands-helping {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 35px 35px 10px 10px;
+ 
 }
 
 .meals {
@@ -275,6 +435,23 @@ footer ul .fa-hands-helping {
 
 .meals:hover {
   padding-right: 75px;
+}
+
+.meals .cross {
+  transition: all 400ms ease-in-out;
+}
+
+.meals:hover .cross {
+  opacity: 1;
+  transform: translate(-50px);
+}
+
+.meals .fa-check-circle {
+  transition: all 500ms ease-in-out;
+}
+
+.meals:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 
 .second__line {
@@ -319,12 +496,14 @@ footer ul .fa-hands-helping {
   margin: 30px 0;
   padding: 20px;
   width: 50%;
+  transition: all 300ms ease-in-out;
 }
 
 .btn__order button:hover {
   background-color: #ae80e5;
   background-blend-mode: lighten;
   box-shadow: 4px 4px 6px #000;
+  transition: 300ms ease-in-out;
 }
 
 .btn__order {
@@ -335,12 +514,17 @@ footer ul .fa-hands-helping {
 .operation {
   margin-bottom: 50px;
 }
+
 .operation h2 {
   padding: 20px;
 }
 
 .operation__steps {
   list-style-type: none;
+}
+
+ul.operation__steps  {
+  padding-left: 0;
 }
 
 .operation__steps li {

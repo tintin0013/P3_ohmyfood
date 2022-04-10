@@ -1,3 +1,11 @@
+.loader__food {
+    padding-top: 20%;
+}
+  
+.loader__food span {
+    width: 100px;
+}
+
 .main__restaurant {
     padding: 0 20%;
 }

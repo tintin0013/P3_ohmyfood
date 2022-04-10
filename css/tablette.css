@@ -1,5 +1,9 @@
-footer {
-    text-align: center;
+.loader__food {
+    padding-top: 30%;
+}
+  
+.loader__food span {
+    width: 50px;
 }
 
 .number {
