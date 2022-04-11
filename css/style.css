@@ -161,7 +161,7 @@ footer ul .fa-hands-helping {
 }
 
 .restaurant__title h3 {
-  padding: 30px 0px 0px 10px;
+  padding: 30px 0px 0px 20px;
 }
 
 .card {
@@ -218,6 +218,11 @@ footer ul .fa-hands-helping {
 .heart h4 {
   margin: 0;
   font-size: 1.5rem;
+}
+
+figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .loader {
@@ -326,6 +331,7 @@ footer ul .fa-hands-helping {
 
 .cross .fa-check-circle {
   color: #fff;
+  font-size: 25px;
   transition: transform 500ms ease-in-out;
 }
 
@@ -351,15 +357,15 @@ footer ul .fa-hands-helping {
   background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   border: 1px solid transparent;
   border-radius: 30px;
-  padding: 10px 5px;
-  color: #fff;
+  padding: 10px 15px;
+ color: #fff; 
   font-weight: bold;
   box-shadow: 4px 4px 6px #aaa;
-  cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
 .btn__about button:hover {
+  cursor: pointer;
   background-color: #ae80e5;
   background-blend-mode: lighten;
   box-shadow: 4px 4px 6px #000;
@@ -372,19 +378,14 @@ footer ul .fa-hands-helping {
   border: 5px solid #99E2D0;
   border-radius: 5px;
   position: absolute;
-  right: 1%;
+  right:3%;
   top: 5%;
-}
-
-.fill {
-  cursor: pointer;
- /* transition: all 300ms ease-in-out;*/
 }
 
 .fill:hover {
   animation: fill 300ms ease-in-out;
   display: inline-block;
-  opacity: 1;
+  cursor: pointer;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
