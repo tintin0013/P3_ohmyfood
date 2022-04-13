@@ -588,16 +588,44 @@ figcaption p {
 
          /* Animations des plats */
 
-.starter {
-  animation: fadein 3s ease-in-out;
+.starter .one {
+  animation: fadein 500ms ease-in-out;
 }
 
-.plat {
-  animation: fadein 6s ease-in-out;
+.starter .two {
+  animation: fadein 1000ms ease-in-out;
 }
 
-.dessert {
-  animation: fadein 9s ease-in-out;
+.starter .three {
+  animation: fadein 1500ms ease-in-out;
+}
+
+.starter .four {
+  animation: fadein 1750ms ease-in-out;
+}
+
+.plat .one {
+  animation: fadein 2000ms ease-in-out;
+}
+
+.plat .two {
+  animation: fadein 2500ms ease-in-out;
+}
+
+.plat .three {
+  animation: fadein 3000ms ease-in-out;
+}
+
+.dessert .one {
+  animation: fadein 3500ms ease-in-out;
+}
+
+.dessert .two {
+  animation: fadein 4000ms ease-in-out;
+}
+
+.dessert .three {
+  animation: fadein 4500ms ease-in-out;
 }
 
 
