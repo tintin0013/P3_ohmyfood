@@ -476,6 +476,10 @@ figcaption p {
 
 .meals h4 {
   margin: 0;
+  font-size: 1.2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .meals:hover {
